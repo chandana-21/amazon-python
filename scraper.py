@@ -38,8 +38,6 @@ def send_mail():
         msg
     )
 
-    server.sendmail
-
     print("Email has been sent!")
 
     server.quit()
