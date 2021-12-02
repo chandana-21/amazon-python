@@ -16,7 +16,7 @@ def check_price():
     price = soup.find("span", {'class':'offer-price'}).get_text()
     int_price = int(price[1:2]+price[3:5])*10
     print(int_price)
-    if int_price > 800:
+    if int_price < 800:
         send_mail()
 
 def send_mail():
@@ -25,7 +25,7 @@ def send_mail():
     server.starttls()
     server.ehlo()
 
-    server.login('mailsofck@gmail.com','pqxmiciqzvdaaxjc')
+    server.login('m*******k@gmail.com','pqxmiciqzvdaaxjc')
 
     subject = 'Price fell down for Verity!!!!!'
     body = 'Check the link please and order quick: https://www.amazon.in/dp/1791392792/?coliid=I1Q6Q1GN90M81Q&colid=34HQJ9T6JADS3&psc=1&ref_=lv_ov_lig_dp_it'
@@ -33,8 +33,8 @@ def send_mail():
     msg = f"Subject: {subject}\n\n{body}"
 
     server.sendmail(
-        'mailsofck@gmail.com', #from
-        'mailsofck@gmail.com', #to
+        'm*******k@gmail.com', #from
+        'm*******k@gmail.com', #to
         msg
     )
 
