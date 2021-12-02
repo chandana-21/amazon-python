@@ -33,7 +33,8 @@ def send_mail():
     msg = f"Subject: {subject}\n\n{body}"
 
     server.sendmail(
-        'mailsofck@gmail.com', 
+        'mailsofck@gmail.com', #from
+        'mailsofck@gmail.com', #to
         msg
     )
 
